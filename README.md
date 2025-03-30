@@ -16,7 +16,7 @@ Built a full-featured e-commerce platform simulating a real online store. Custom
 
 Java, Spring Boot, Hibernate, MySQL, JWT, WebSocket, MapStruct, Lombok, Swagger, Freemarker, Spring Mail | ReactJS, TypeScript, Mantine UI, React Query, Zustand
 
-## Class Diagram
+<!-- ## Class Diagram
 
 Hệ thống gồm có 57 lớp chính, được chia thành 13 nhóm.
 
@@ -42,17 +42,9 @@ Cơ sở dữ liệu của hệ thống gồm có 60 bảng.
   <img src="https://user-images.githubusercontent.com/60851390/228535444-d4945691-af6d-4514-b8bb-ae670fac7618.svg" alt="Database Diagram" />
   <br>
   <em>Database Diagram</em>
-</p>
+</p> -->
 
-## Kiến trúc tổng thể hệ thống
-
-<p align="center" style="background-color: white;">
-  <img src="https://user-images.githubusercontent.com/60851390/228531433-ba3a591b-7b9b-4e51-bfae-4ea0cdfe3c5a.svg" alt="Database Diagram" width="700" />
-  <br>
-  <em>System Architecture</em>
-</p>
-
-# Sản phẩm
+## Sản phẩm
 
 Một số trang của hệ thống.
 
