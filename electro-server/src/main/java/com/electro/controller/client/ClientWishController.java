@@ -67,5 +67,4 @@ public class ClientWishController {
         wishRepository.deleteAllById(ids);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
-
 }

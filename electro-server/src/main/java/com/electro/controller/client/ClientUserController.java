@@ -99,5 +99,4 @@ public class ClientUserController {
             throw new Exception("Wrong old password");
         }
     }
-
 }

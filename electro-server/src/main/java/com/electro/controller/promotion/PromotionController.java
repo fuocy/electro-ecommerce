@@ -31,5 +31,4 @@ public class PromotionController {
         boolean promotionable = promotionService.checkCanCreatePromotionForProduct(productId, startDate, endDate);
         return ResponseEntity.status(HttpStatus.OK).body(new PromotionCheckingResponse(promotionable));
     }
-
 }

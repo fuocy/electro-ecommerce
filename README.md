@@ -2,6 +2,8 @@
 
 Built a full-featured e-commerce platform simulating a real online store. Customers can browse products, manage carts, place orders, chat with staff, and receive real-time notifications. Admins manage inventory and analytics.
 
+### Video demo: https://youtu.be/3ejhjt0IXyQ
+
 ## Responsibilities:
 
 - Implemented JWT authentication & role-based authorization (Admin, Customer, Employee).

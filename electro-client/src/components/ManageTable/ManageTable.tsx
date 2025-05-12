@@ -1,12 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ActionIcon, Checkbox, Group, Table } from '@mantine/core';
-import { Edit, Eye, Trash } from 'tabler-icons-react';
-import BaseResponse from 'models/BaseResponse';
-import { EntityPropertySchema } from 'types';
-import { ListResponse } from 'utils/FetchUtils';
-import useManageTableStyles from 'components/ManageTable/ManageTable.styles';
-import useManageTableViewModel from 'components/ManageTable/ManageTable.vm';
+import React from "react";
+import { Link } from "react-router-dom";
+import { ActionIcon, Checkbox, Group, Table } from "@mantine/core";
+import { Edit, Eye, Trash } from "tabler-icons-react";
+import BaseResponse from "models/BaseResponse";
+import { EntityPropertySchema } from "types";
+import { ListResponse } from "utils/FetchUtils";
+import useManageTableStyles from "components/ManageTable/ManageTable.styles";
+import useManageTableViewModel from "components/ManageTable/ManageTable.vm";
 
 export interface ManageTableProps<T> {
   listResponse: ListResponse<T>;
@@ -36,11 +36,16 @@ function ManageTable<T extends BaseResponse>(props: ManageTableProps<T>) {
         <Checkbox
           onChange={handleToggleAllRowsCheckbox}
           checked={selection.length === listResponse.content.length}
-          indeterminate={selection.length > 0 && selection.length !== listResponse.content.length}
+          indeterminate={
+            selection.length > 0 &&
+            selection.length !== listResponse.content.length
+          }
           transitionDuration={0}
         />
       </th>
-      {tableHeads.map((item) => <th key={item}>{item}</th>)}
+      {tableHeads.map((item) => (
+        <th key={item}>{item}</th>
+      ))}
       <th style={{ width: 120 }}>Thao tác</th>
     </tr>
   );
@@ -72,17 +77,17 @@ function ManageTable<T extends BaseResponse>(props: ManageTableProps<T>) {
               title="Xem"
               onClick={() => handleViewEntityButton(entity.id)}
             >
-              <Eye size={16}/>
+              <Eye size={16} />
             </ActionIcon>
             <ActionIcon
               component={Link}
-              to={'update/' + entity.id}
+              to={"update/" + entity.id}
               color="teal"
               variant="outline"
               size={24}
               title="Cập nhật"
             >
-              <Edit size={16}/>
+              <Edit size={16} />
             </ActionIcon>
             <ActionIcon
               color="red"
@@ -91,7 +96,7 @@ function ManageTable<T extends BaseResponse>(props: ManageTableProps<T>) {
               title="Xóa"
               onClick={() => handleDeleteEntityButton(entity.id)}
             >
-              <Trash size={16}/>
+              <Trash size={16} />
             </ActionIcon>
           </Group>
         </td>
@@ -107,7 +112,7 @@ function ManageTable<T extends BaseResponse>(props: ManageTableProps<T>) {
       striped
       sx={(theme) => ({
         borderRadius: theme.radius.sm,
-        overflow: 'hidden',
+        overflow: "hidden",
       })}
     >
       <thead>{entitiesTableHeadsFragment}</thead>

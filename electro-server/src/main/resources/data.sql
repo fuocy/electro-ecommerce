@@ -62,7 +62,7 @@ VALUES ('2024-10-06 19:21:11', '2024-05-03 08:50:28', '02 Moland Court', 9, 10);
 
 -- user TABLE: 20 records
 INSERT INTO user (created_at, updated_at, username, password, fullname, email, phone, gender, address_id, avatar, status)
-VALUES ('2024-10-05 07:30:07', '2024-06-03 16:38:23', 'dnucator0', '$2a$10$VsJWsj.z4mu7hwgl24mbLO4kINGNU3NntESfPiZbnslKDts.RqEl6', 'Dolly Nucator', 'dnucator0@prweb.com', '0919944705', 'M', 1, 'http://dummyimage.com/138x100.png/dddddd/000000', 1);
+VALUES ('2024-10-05 07:30:07', '2024-06-03 16:38:23', 'admin', '$2y$10$3qMbcZWo6SqhKzsKg7zLhueFmUftELJboZWV4Goj.b0HZOduiYaYa', 'Dolly Nucator', 'dnucator0@prweb.com', '0919944705', 'M', 1, 'http://dummyimage.com/138x100.png/dddddd/000000', 1);
 INSERT INTO user (created_at, updated_at, username, password, fullname, email, phone, gender, address_id, avatar, status)
 VALUES ('2024-01-07 17:51:29', '2024-02-24 10:37:18', 'jgratten1', '$2a$10$VsJWsj.z4mu7hwgl24mbLO4kINGNU3NntESfPiZbnslKDts.RqEl6', 'Jose Gratten', 'jgratten1@google.co.jp', '0919944709', 'F', 2, 'http://dummyimage.com/222x100.png/ff4444/ffffff', 1);
 INSERT INTO user (created_at, updated_at, username, password, fullname, email, phone, gender, address_id, avatar, status)
@@ -70,7 +70,7 @@ VALUES ('2024-11-30 21:45:42', '2024-03-05 17:40:25', 'ethuillier2', '$2a$10$VsJ
 INSERT INTO user (created_at, updated_at, username, password, fullname, email, phone, gender, address_id, avatar, status)
 VALUES ('2024-01-27 04:22:37', '2024-05-04 02:25:59', 'dtreat3', '$2a$10$VsJWsj.z4mu7hwgl24mbLO4kINGNU3NntESfPiZbnslKDts.RqEl6', 'Danila Treat', 'dtreat3@nymag.com', '0919944735', 'F', 4, null, 1);
 INSERT INTO user (created_at, updated_at, username, password, fullname, email, phone, gender, address_id, avatar, status)
-VALUES ('2024-03-27 11:16:32', '2024-10-03 12:04:10', 'tkorting4', '$2a$10$VsJWsj.z4mu7hwgl24mbLO4kINGNU3NntESfPiZbnslKDts.RqEl6', 'Tanya Korting', 'tkorting4@livejournal.com', '0919944735', 'F', 5, null, 1);
+VALUES ('2024-03-27 11:16:32', '2024-10-03 12:04:10', 'tkorting4', '$2y$10$3qMbcZWo6SqhKzsKg7zLhueFmUftELJboZWV4Goj.b0HZOduiYaYa', 'Tanya Korting', 'tkorting4@livejournal.com', '0919944735', 'F', 5, null, 1);
 
 -- role TABLE: 3 records
 INSERT INTO `role` (created_at, updated_at, code, name, status)

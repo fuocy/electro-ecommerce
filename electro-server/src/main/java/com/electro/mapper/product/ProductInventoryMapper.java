@@ -17,3 +17,4 @@ public interface ProductInventoryMapper {
     List<ProductInventoryResponse> toResponse(List<ProductInventory> productInventory);
 
 }
+

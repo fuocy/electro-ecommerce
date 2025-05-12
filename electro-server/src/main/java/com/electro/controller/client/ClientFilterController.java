@@ -48,5 +48,4 @@ public class ClientFilterController {
                         .setBrandName(brand.getName()))
                 .collect(Collectors.toList());
     }
-
 }

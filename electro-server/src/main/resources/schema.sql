@@ -121,6 +121,8 @@ ALTER TABLE user
 ALTER TABLE user
     ADD CONSTRAINT FK_USER_ON_ADDRESS FOREIGN KEY (address_id) REFERENCES address (id);
 
+CREATE UNIQUE INDEX idx_username ON user(username);
+
 CREATE TABLE `role`
 (
     id         BIGINT AUTO_INCREMENT NOT NULL,
@@ -557,6 +559,9 @@ CREATE TABLE variant
     CONSTRAINT pk_variant PRIMARY KEY (id)
 );
 
+CREATE INDEX idx_product_id ON variant(product_id);
+CREATE INDEX idx_price ON variant(price);
+
 ALTER TABLE variant
     ADD CONSTRAINT uc_variant_sku UNIQUE (sku);
 
@@ -919,6 +924,8 @@ ALTER TABLE `order`
 ALTER TABLE `order`
     ADD CONSTRAINT FK_ORDER_ON_USER FOREIGN KEY (user_id) REFERENCES user (id);
 
+CREATE UNIQUE INDEX idx_code ON `order`(code);
+
 ALTER TABLE docket
     ADD CONSTRAINT FK_DOCKET_ON_ORDER FOREIGN KEY (order_id) REFERENCES `order` (id);
 
@@ -1068,6 +1075,8 @@ CREATE TABLE cart
     status     TINYINT               NOT NULL,
     CONSTRAINT pk_cart PRIMARY KEY (id)
 );
+
+CREATE INDEX idx_user_id ON cart(user_id);
 
 ALTER TABLE cart
     ADD CONSTRAINT FK_CART_ON_USER FOREIGN KEY (user_id) REFERENCES user (id);

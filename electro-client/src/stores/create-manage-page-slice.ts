@@ -1,8 +1,8 @@
-import { Dispatch, SetStateAction } from 'react';
-import { extractValue, SliceCreator } from 'stores/use-app-store';
-import FilterUtils, { Filter } from 'utils/FilterUtils';
-import { RequestParams } from 'utils/FetchUtils';
-import PageConfigs from 'pages/PageConfigs';
+import { Dispatch, SetStateAction } from "react";
+import { extractValue, SliceCreator } from "stores/use-app-store";
+import FilterUtils, { Filter } from "utils/FilterUtils";
+import { RequestParams } from "utils/FetchUtils";
+import PageConfigs from "pages/PageConfigs";
 
 export interface ManagePageState {
   activePage: number;
@@ -27,7 +27,7 @@ const initialManagePageState = {
   activePage: PageConfigs.initialListResponse.page,
   activePageSize: PageConfigs.initialListResponse.size,
   activeFilter: null,
-  searchToken: '',
+  searchToken: "",
   selection: [],
   filters: [],
   activeFilterPanel: false,
@@ -35,13 +35,48 @@ const initialManagePageState = {
 
 const createManagePageSlice: SliceCreator<ManagePageState> = (set, get) => ({
   ...initialManagePageState,
-  setActivePage: (value) => set((state) => extractValue(state, value, 'activePage'), false, 'AppStore/activePage'),
-  setActivePageSize: (value) => set((state) => extractValue(state, value, 'activePageSize'), false, 'AppStore/activePageSize'),
-  setActiveFilter: (value) => set((state) => extractValue(state, value, 'activeFilter'), false, 'AppStore/activeFilter'),
-  setSearchToken: (value) => set((state) => extractValue(state, value, 'searchToken'), false, 'AppStore/searchToken'),
-  setSelection: (value) => set((state) => extractValue(state, value, 'selection'), false, 'AppStore/selection'),
-  setFilters: (value) => set((state) => extractValue(state, value, 'filters'), false, 'AppStore/filters'),
-  setActiveFilterPanel: (value) => set((state) => extractValue(state, value, 'activeFilterPanel'), false, 'AppStore/activeFilterPanel'),
+  setActivePage: (value) =>
+    set(
+      (state) => extractValue(state, value, "activePage"),
+      false,
+      "AppStore/activePage"
+    ),
+  setActivePageSize: (value) =>
+    set(
+      (state) => extractValue(state, value, "activePageSize"),
+      false,
+      "AppStore/activePageSize"
+    ),
+  setActiveFilter: (value) =>
+    set(
+      (state) => extractValue(state, value, "activeFilter"),
+      false,
+      "AppStore/activeFilter"
+    ),
+  setSearchToken: (value) =>
+    set(
+      (state) => extractValue(state, value, "searchToken"),
+      false,
+      "AppStore/searchToken"
+    ),
+  setSelection: (value) =>
+    set(
+      (state) => extractValue(state, value, "selection"),
+      false,
+      "AppStore/selection"
+    ),
+  setFilters: (value) =>
+    set(
+      (state) => extractValue(state, value, "filters"),
+      false,
+      "AppStore/filters"
+    ),
+  setActiveFilterPanel: (value) =>
+    set(
+      (state) => extractValue(state, value, "activeFilterPanel"),
+      false,
+      "AppStore/activeFilterPanel"
+    ),
   getRequestParams: () => ({
     page: get().activePage,
     size: get().activePageSize,
