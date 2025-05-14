@@ -57,7 +57,7 @@ public interface ProductRepository extends JpaRepository<Product, Long>, JpaSpec
                 input -> {
                     CriteriaBuilder cb = input.getCriteriaBuilder();
 
-                    // Lấy phần còn lại của danh sách `input.getArguments()` sau khi bỏ qua phần tử đầu tiên
+//                  Lấy phần còn lại của danh sách `input.getArguments()` sau khi bỏ qua phần tử đầu tiên
                     Object[] values = input.getArguments().stream().skip(1).toArray();
 
                     return cb.function("JSON_EXTRACT", String.class,

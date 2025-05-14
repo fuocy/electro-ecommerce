@@ -61,7 +61,6 @@ public class JwtUtils {
         } catch (IllegalArgumentException e) {
             log.error("Invalid JWT empty {}", e.getMessage());
         }
-
         return false;
     }
 

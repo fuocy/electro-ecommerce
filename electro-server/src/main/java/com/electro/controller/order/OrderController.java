@@ -21,10 +21,4 @@ public class OrderController {
 
     private OrderService orderService;
 
-    @PutMapping("/cancel/{code}")
-    public ResponseEntity<ObjectNode> cancelOrder(@PathVariable String code) {
-        orderService.cancelOrder(code);
-        return ResponseEntity.status(HttpStatus.OK).body(new ObjectNode(JsonNodeFactory.instance));
-    }
-
 }
