@@ -111,7 +111,6 @@ public class OrderServiceImpl implements OrderService {
                 .collect(Collectors.toSet()));
 
         // Calculate price values
-        // TODO: Vấn đề khuyến mãi
         BigDecimal totalAmount = BigDecimal.valueOf(order.getOrderVariants().stream()
                 .mapToDouble(orderVariant -> orderVariant.getAmount().doubleValue())
                 .sum());

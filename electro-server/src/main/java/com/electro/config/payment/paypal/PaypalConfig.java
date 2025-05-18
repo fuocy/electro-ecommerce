@@ -9,14 +9,4 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @RequiredArgsConstructor
 public class PaypalConfig {
-
-    @Value("${paypal.baseUrl}")
-    private String baseUrl;
-
-    @Value("${paypal.clientId}")
-    private String clientId;
-
-    @Value("${paypal.secret}")
-    private String secret;
-
 }

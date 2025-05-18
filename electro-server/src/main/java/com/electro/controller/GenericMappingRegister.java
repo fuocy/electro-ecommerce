@@ -608,7 +608,7 @@ public class GenericMappingRegister {
                 ResourceName.ORDER
         ), OrderRequest.class);
 
-        register("waybills", waybillController, context.getBean(WaybillService.class), WaybillRequest.class);
+//        register("waybills", waybillController, context.getBean(WaybillService.class), WaybillRequest.class);
 
         register("reviews", reviewController, context.getBean(ReviewService.class), ReviewRequest.class);
 
